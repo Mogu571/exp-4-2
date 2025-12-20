@@ -291,7 +291,7 @@ function buildTimeline() {
     };
     timeline.push(startExperimentTransition);
 
-    // -------------------------- 环节3：100个实验试次（循环生成） --------------------------
+    // -------------------------- 环节3：n个实验试次（循环生成） --------------------------
     for (let i = 0; i < IMAGE_LIST.length; i++) {
         const currentImage = IMAGE_LIST[i];
 
@@ -366,7 +366,7 @@ function buildTimeline() {
         type: jsPsychHtmlKeyboardResponse,
         stimulus: `
             <div style="text-align: center; padding: 50px; background-color: #ffffff; border-radius: 15px; margin: 100px auto; max-width: 600px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); border: 1px solid #e9ecef;">
-                <h2 style="font-size: 28px; color: #28a745; margin-bottom: 30px;">✓ 实验已完成！</h2>
+                <h2 style="font-size: 28px; color: #28a745; margin-bottom: 30px;">✓ 实验4已完成！</h2>
                 <p style="font-size: 18px; margin-bottom: 40px; color: #495057;">感谢您的参与！</p>
                 <p style="font-size: 16px; margin-bottom: 30px; color: #6c757d;">请点击下方按钮下载您的实验数据</p>
                 <button id="js-download-btn" style="background: #007cba; color: white; padding: 15px 30px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; margin: 10px;">
@@ -389,7 +389,7 @@ function buildTimeline() {
                 document.getElementById("js-download-btn").addEventListener("click", () => {
                     const dataText = GLOBAL_DATA.experimentLog.join("\n");
                     const timestamp = new Date().toLocaleString().replace(/[:/ ]/g, "-");
-                    const fileName = `${GLOBAL_DATA.subjectName}_实验数据_${timestamp}.txt`;
+                    const fileName = `${GLOBAL_DATA.subjectName}_实验4数据_${timestamp}.txt`;
                     
                     if (downloadData(dataText, fileName)) {
                         statusDiv.textContent = "✓ 数据下载成功！";

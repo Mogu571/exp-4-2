@@ -145,7 +145,7 @@ function buildTimeline() {
         type: jsPsychHtmlKeyboardResponse,
         stimulus: `
             <div class="welcome-container">
-                <h2>欢迎参与实验！</h2>
+                <h2>欢迎参与实验4！</h2>
                 <div style="margin-top: 50px;">
                     <p style="font-size: 18px; margin-bottom: 15px;">请输入您的姓名（拼音）：</p>
                     <input type="text" id="subject-name" placeholder="例如：zhangsan" style="padding: 8px 12px; font-size: 16px; border: 2px solid #ddd; border-radius: 5px; width: 200px;">
